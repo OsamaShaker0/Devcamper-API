@@ -5,12 +5,7 @@ const jwt = require('jsonwebtoken');
 
 exports.protect = asyncHandler(async (req, res, next) => {
   let token;
-  // if (
-  //   !req.headers.authorization ||
-  //   !req.headers.authorization.startsWith('Bearer ')
-  // ) {
-  //   next(new ErrorResponse(`Not authrized to access this route `, 401));
-  // }
+  
   if (
     req.headers.authorization &&
     req.headers.authorization.startsWith('Bearer ')
